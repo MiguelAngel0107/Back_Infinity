@@ -9,9 +9,29 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY')
 
-DEBUG = config('DEBUG')
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['*']
+if not DEBUG:
+    ALLOWED_HOSTS = [
+        'owninfinitybackend.onrender.com',
+        'www.owninfinitybackend.onrender.com',
+        'owninfinity.onrender.com', 
+        'www.owninfinity.onrender.com', 
+        'owninfinity.com',
+        'www.owninfinity.com',
+        '0.0.0.0:10000',
+        '0.0.0.0'
+    ]
+else:
+    ALLOWED_HOSTS = [
+        'localhost',
+        '127.0.0.1'
+    ]
+
+if not DEBUG:
+    RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+    if RENDER_EXTERNAL_HOSTNAME:
+        ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 # Application definition
 

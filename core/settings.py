@@ -13,7 +13,14 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 if not DEBUG:
     ALLOWED_HOSTS = [
-
+        'owninfinitybackend.onrender.com',
+        'www.owninfinitybackend.onrender.com',
+        'owninfinity.onrender.com', 
+        'www.owninfinity.onrender.com', 
+        'owninfinity.com',
+        'www.owninfinity.com',
+        '0.0.0.0:10000',
+        '0.0.0.0'
     ]
 else:
     ALLOWED_HOSTS = [

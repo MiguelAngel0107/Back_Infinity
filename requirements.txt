@@ -10,7 +10,7 @@ cryptography==39.0.0
 defusedxml==0.7.1
 dj-database-url==1.2.0
 Django==3.2.16
-django-ckeditor==6.5.1
+django-ckeditor==6.3.2
 django-cors-headers==3.13.0
 django-js-asset==2.0.0
 django-templated-mail==1.1.1

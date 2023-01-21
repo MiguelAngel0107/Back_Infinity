@@ -238,7 +238,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-if DEBUG:
+if not DEBUG:
     DEFAULT_FROM_EMAIL = 'OwnInfinity - Agencia de Software <admin@owninfinity.com>'
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_HOST = config('EMAIL_HOST')

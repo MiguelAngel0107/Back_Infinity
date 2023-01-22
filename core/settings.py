@@ -48,7 +48,9 @@ PROYECTS_APPS = [
     'apps.user',
 ]
 
-SYSTEM_APPS = []
+SYSTEM_APPS = [
+    'apps.appointment'
+]
 
 THIRD_PARTY_APPS = [
     'rest_framework',

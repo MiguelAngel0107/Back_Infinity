@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import Reserve
+from .views import Reserve_Save, Get_Reserve
 
 app_name="apps.appointment"
 
 urlpatterns = [
-    path('reserve/', Reserve.as_view())
+    path('get-reserve/', Get_Reserve.as_view()),
+    path('reserve/', Reserve_Save.as_view())
 ]
